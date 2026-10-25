@@ -1,0 +1,156 @@
+.asana-board-container {
+  display: flex;
+  padding: 16px 20px 30px 20px;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 100%;
+  align-items: flex-start;
+}
+
+.asana-board-col {
+  width: 290px;
+  min-width: 290px;
+  max-width: 290px;
+  background-color: #f1f3f5;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--asana-border);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 190px);
+}
+
+.asana-col-header {
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--asana-border);
+}
+
+.asana-col-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.asana-col-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--asana-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.asana-col-count {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--asana-text-secondary);
+  background-color: #e5e8ec;
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+}
+
+.asana-col-cards {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 40px;
+}
+
+.asana-col-cards.drag-over {
+  background-color: #e4e9f0;
+  border: 1px dashed var(--asana-blue);
+  border-radius: var(--radius-sm);
+}
+
+.asana-card {
+  background-color: #ffffff;
+  border: 1px solid var(--asana-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.1s ease;
+}
+
+.asana-card:hover {
+  border-color: var(--asana-border-strong);
+  background-color: #ffffff;
+}
+
+.asana-card.dragging {
+  opacity: 0.4;
+  border: 1px dashed var(--asana-blue);
+}
+
+.asana-card-cover {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--asana-border-subtle);
+  margin-bottom: 2px;
+}
+
+.asana-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.asana-card-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--asana-text-primary);
+  line-height: 1.35;
+  flex: 1;
+}
+
+.asana-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding-top: 6px;
+  border-top: 1px solid #f6f8fa;
+}
+
+.card-tags {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-meta-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--asana-text-secondary);
+}
+
+.asana-col-add-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--asana-text-secondary);
+  padding: 8px 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-top: 1px solid var(--asana-border);
+  cursor: pointer;
+}
+
+.asana-col-add-btn:hover {
+  background-color: #e5e8ec;
+  color: var(--asana-text-primary);
+}

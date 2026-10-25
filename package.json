@@ -1,0 +1,12 @@
+{
+  "name": "incredible-x-tech",
+  "version": "1.0.0",
+  "description": "INCREDIBLE_x_TECH Enterprise Collaborative Project Management Platform",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server.js",
+    "seed": "node backend/src/seed.js",
+    "test": "node backend/tests/test_api.js"
+  }
+}
+
